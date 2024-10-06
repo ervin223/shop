@@ -1,0 +1,32 @@
+﻿@model KindergartenManager.Models.Kindergarten.ChildrenIndexViewModel
+
+<h1>Lapsed</h1>
+<a asp-action="Create" class="btn btn-primary">Добавить ребенка</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nimi</th>
+            <th>Sünnipaev</th>
+            <th>Ruhm</th>
+            <th>Õpetaja nimi</th>
+            <th>Tegevused</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var child in Model.Children)
+        {
+            <tr>
+                <td>@child.ChildName</td>
+                <td>@child.BirthDate.ToShortDateString()</td>
+                <td>@child.GroupName</td>
+                <td>@child.TeacherName</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@child.Id" class="btn btn-warning">Изменить</a>
+                    <a asp-action="Delete" asp-route-id="@child.Id" class="btn btn-danger">Удалить</a>
+                    <a asp-action="Details" asp-route-id="@child.Id" class="btn btn-info">Детали</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

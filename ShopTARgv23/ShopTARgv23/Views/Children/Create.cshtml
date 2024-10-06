@@ -1,0 +1,32 @@
+﻿@model KindergartenManager.Models.Kindergarten.ChildCreateUpdateViewModel
+
+<h1>Add</h1>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="ChildName"></label>
+        <input asp-for="ChildName" class="form-control" />
+        <span asp-validation-for="ChildName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="BirthDate"></label>
+        <input asp-for="BirthDate" class="form-control" type="date" />
+        <span asp-validation-for="BirthDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="GroupName"></label>
+        <input asp-for="GroupName" class="form-control" />
+        <span asp-validation-for="GroupName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TeacherName"></label>
+        <input asp-for="TeacherName" class="form-control" />
+        <span asp-validation-for="TeacherName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ParentContactInfo"></label>
+        <input asp-for="ParentContactInfo" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+    <a asp-action="Index" class="btn btn-secondary">Отмена</a>
+</form>

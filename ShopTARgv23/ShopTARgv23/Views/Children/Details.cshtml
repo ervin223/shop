@@ -1,0 +1,32 @@
+﻿@model KindergartenManager.Models.Kindergarten.ChildDetailsViewModel
+
+<h1>Details</h1>
+
+<div>
+    <h4>Nimi</h4>
+    <hr />
+    <p>@Model.ChildName</p>
+</div>
+<div>
+    <h4>Sünnipaev</h4>
+    <hr />
+    <p>@Model.BirthDate.ToShortDateString()</p>
+</div>
+<div>
+    <h4>Ruhm</h4>
+    <hr />
+    <p>@Model.GroupName</p>
+</div>
+<div>
+    <h4>Õpetaja</h4>
+    <hr />
+    <p>@Model.TeacherName</p>
+</div>
+<div>
+    <h4>Informatsioon</h4>
+    <hr />
+    <p>@Model.ParentContactInfo</p>
+</div>
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Назад</a>
+</div>
