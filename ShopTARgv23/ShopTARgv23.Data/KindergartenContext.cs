@@ -1,14 +1,15 @@
-﻿using KindergartenManager.Models.Kindergarten;
-using Microsoft.EntityFrameworkCore;
-using KindergartenManager.Models.Kindergarten; 
+﻿using Microsoft.EntityFrameworkCore;
+using ShopTARgv23.Core.Domain;
 
-
-namespace KindergartenManager.Data
+namespace ShopTARgv23.Data
 {
-    public class KindergartenContext : DbContext
+    public class ShopTARgv23Context : DbContext
     {
-        public KindergartenContext(DbContextOptions<KindergartenContext> options) : base(options) { }
+        public ShopTARgv23Context(DbContextOptions<ShopTARgv23Context> options)
+            : base(options) { }
 
-        public DbSet<Child> Children { get; set; }
+        public DbSet<Kindergarten> Kindergartens { get; set; }
+
+
     }
 }
